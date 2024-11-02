@@ -4,7 +4,7 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 
 
-stock_data = yf.download('MSFT', start='2020-01-01', end='2023-01-01')
+stock_data = yf.download('MSFT', start='2020-01-01', end='2024-11-02')
 stock_data['Short_MA'] = stock_data['Close'].rolling(window=20).mean()  # 20-day moving average
 stock_data['Long_MA'] = stock_data['Close'].rolling(window=50).mean()  # 50-day moving average
 
